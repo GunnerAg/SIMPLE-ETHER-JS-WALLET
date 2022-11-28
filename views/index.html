@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercutable Files</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" >
+    import { ethers } from "https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.esm.js";
+    var Wallet = ethers.Wallet.createRandom();
+    var publicKey = Wallet.address;
+    var privateKey = Wallet.privateKey;
+    var mnemonic = Wallet.mnemonic.phrase;
+    document.getElementById("private-key").innerHTML = privateKey;
+    document.getElementById("public-key").innerHTML = publicKey;
+    document.getElementById("mnemonic").innerHTML = mnemonic;</script>
+  </script>
+</head>
+
+<body>
+  <!--Display text and a tv image-->
+  <h1>Par de claves:</h1>
+  <br>
+  <div class="photo">
+    <h2>Private key :</h2>
+    <p id="private-key"></p>
+    <br>
+    <hr>
+    <h2>Public key :</h2>
+    <p id="public-key"></p>
+    <br>
+    <hr>
+    <h2>mnemonic :</h2>
+    <p id="mnemonic"></p>
+  </div>
+</body>
+
+</html>
